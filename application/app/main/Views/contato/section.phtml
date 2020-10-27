@@ -1,0 +1,37 @@
+<section class="area_distribuidor" style="background: #131313;">
+
+	<div class="container">
+
+		<div class="title_2">NOSSOS CONTATOS</div>
+
+		<a class="whats" href="<?= ! empty($redes_sociais['email']) ? 'https://wa.me/' . $redes_sociais['whatsapp'] : '#'; ?>" target="_blank">
+			<span class="icon_whats_b">
+				<img src="<?= base_path(true); ?>img/icons/icon_whats_b.png" class="img_cem">
+			</span>
+			<span class="n_whats">+55 18 99147-7224</span>
+		</a>
+
+		<a href="<?= ! empty($redes_sociais['email']) ? 'mailto://' . $redes_sociais['email'] : '#'; ?>" class="mail">
+			<span class="icon_mail_b">
+				<img src="<?= base_path(true); ?>img/icons/icon_envelope_b.png" class="img_cem">
+			</span>
+			<span class="email">contato@rabonicosmeticos.com</span>
+		</a>
+
+		<div class="social_media">
+			<a href="<?= $redes_sociais['facebook'] ?? '#'; ?>" target="_blank">
+				<span class="icon_face_b">
+					<img src="<?= base_path(true); ?>img/icons/icon_face_b.png" class="img_cem">
+				</span>
+			</a>
+			<a href="<?= $redes_sociais['instagram'] ?? '#'; ?>" target="_blank">
+				<span class="icon_insta_b">
+					<img src="<?= base_path(true); ?>img/icons/icon_insta_b.png" class="img_cem">
+				</span>
+			</a>
+			<span class="name_social">@rabonicosmeticos</span>
+		</div>
+
+	</div>
+
+</section>

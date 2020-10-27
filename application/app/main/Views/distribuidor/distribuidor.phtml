@@ -1,0 +1,73 @@
+<div class="tag_title">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="title_page1">DISTRIBUIDOR</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container pt-3 pb-3" style="min-height: 600px;">
+
+	<div class="row">
+
+		<div class="col s12">
+
+			<div class="img_empresa">
+				<img src="<?= base_path(true); ?>img/img_distribuidor.jpg" class="img_cem">
+			</div>
+
+			<div class="info_empresa">
+
+				<div class="title1_empresa">QUERO SER UM DISTRIBUIDOR</div>
+				<div class="title2_empresa">PREENCHA O FORMULÁRIO ABAIXO E NOS ENVIE</div>
+
+				<form method="post" novalidate autocomplete="off" action="<?= base_url(); ?>distribuidor">
+
+					<div class="row">
+						<div class="col s12">
+							<div class="input-field">
+								<input type="text" name="nome" class="input_form border-radius-1 1 grey lighten-2" placeholder="Seu Nome" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class="input-field">
+								<input type="text" name="email" class="input_form border-radius-1 grey lighten-2" placeholder="Seu e-mail" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class="input-field">
+								<input type="number" name="telefone" class="input_form border-radius-1 grey lighten-2" placeholder="Seu Telefone" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class="input-field">
+								<input type="text" name="cidade" class="input_form border-radius-1 grey lighten-2" placeholder="Em qual cidade você irá fazer a distribuição?" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class="input-field z-depth-2">
+								<button type="submit" class="btn btn-large col gradient-45deg-darken-pink-pink waves-effect waves-light">
+									Enviar
+								</button>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" name="_method" value="post">
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<?php require VIEWSPATH . 'contato/section.phtml'; ?>

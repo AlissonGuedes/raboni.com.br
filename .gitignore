@@ -1,0 +1,5 @@
+application/writable/cache/*
+application/writable/logs/*
+application/writable/session/*
+application/writable/debugbar/*
+arquivos/*
