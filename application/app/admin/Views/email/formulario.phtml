@@ -3,14 +3,15 @@
 	<form method="post" action="<?= base_url(); ?>mail" novalidate enctype="multipart/form-data" autocomplete="off">
 
 		<div class="modal-content no-padding">
- 
+
 			<!-- conteúdo -->
 
 			<!-- BEGIN Input[Descrição] -->
 			<div class="row">
 				<div class="col s12">
 					<div class="input-field">
-						<textarea name="mensagem" placeholder="" autofocus="autofocus" class="basic--editor"></textarea>
+						<div class="editor basic--editor" style="min-height: 400px;"></div>
+						<input type="hidden" name="mensagem" id="mensagem">
 					</div>
 				</div>
 			</div>
@@ -53,7 +54,7 @@
 		<div class="row">
 			<div class="col s12">
 				<button class="btn amber modal-close waves-effect waves-green btn-flat right" data-confirm="false">Não</a>
-				<button class="btn red right" data-confirm="true"> SIM </button>
+					<button class="btn red right" data-confirm="true"> SIM </button>
 			</div>
 		</div>
 	</div>

@@ -61,6 +61,7 @@ function editor() {
     $('.basic--editor').each(function() {
 
         var editor = new Quill(this, {
+            placeholder: typeof $(this).attr('placeholder') !== 'undefined' ? $(this).attr('placeholder') : null,
             theme: 'snow'
         });
 
