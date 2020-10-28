@@ -6,28 +6,32 @@
 			acesse um de nossos canais de comunicação, nosso ícone do WhatsApp,
 		</div>
 		<div class="contato_dist">
-			<a href="<?= ! empty($redes_sociais['email']) ? 'https://wa.me/' . $redes_sociais['whatsapp'] : '#'; ?>" target="_blank">
-				<div class="icon_dist">
+
+			<?php if ( ! empty($redes_sociais['whatsapp']) ) : ?>
+			<a class="whats" href="<?= 'https://wa.me/' . $redes_sociais['whatsapp']; ?>" target="_blank">
+				<span class="icon_whats_b">
 					<img src="<?= base_path(true); ?>img/icons/icon_whats_b.png" class="img_cem">
-				</div>
+				</span>
+				<span class="n_whats"><?= 'https://wa.me/' . $redes_sociais['whatsapp']; ?></span>
 			</a>
+			<?php endif; ?>
 
 			<a href="<?= ! empty($redes_sociais['email']) ? 'mailto://' . $redes_sociais['email'] : '#'; ?>">
-				<div class="icon_dist">
+				<span class="icon_dist">
 					<img src="<?= base_path(true); ?>img/icons/icon_envelope_b.png" class="img_cem">
-				</div>
+				</span>
 			</a>
 
 			<a href="<?= $redes_sociais['facebook'] ?? '#'; ?>" target="_blank">
-				<div class="icon_dist">
+				<span class="icon_dist">
 					<img src="<?= base_path(true); ?>img/icons/icon_face_b.png" class="img_cem">
-				</div>
+				</span>
 			</a>
 
 			<a href="<?= $redes_sociais['instagram'] ?? '#'; ?>" target="_blank">
-				<div class="icon_dist">
+				<span class="icon_dist">
 					<img src="<?= base_path(true); ?>img/icons/icon_insta_b.png" class="img_cem">
-				</div>
+				</span>
 			</a>
 		</div>
 	</div>
