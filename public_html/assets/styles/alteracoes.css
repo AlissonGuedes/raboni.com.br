@@ -272,14 +272,6 @@ textarea.materialize-textarea:focus:not([readonly]),
 
 /** footer **/
 
-footer {
-    padding: 5px;
-    overflow: hidden;
-    display: block;
-    color: #808080;
-    border-bottom: 5px solid #470926;
-}
-
 .tw {
     width: 30px;
     height: 28px;
