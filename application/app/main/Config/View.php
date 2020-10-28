@@ -39,7 +39,8 @@ class View extends \CodeIgniter\Config\View
 		'configuracoes' => '\configuracoes',
 		'base_url' => '\base_url',
 		'base_site' => '\base_site',
-		'base_path' => '\base_path'
+		'base_path' => '\base_path',
+		'limpa_string' => '\limpa_string'
 	];
 
 	// public static function basesite($path) {

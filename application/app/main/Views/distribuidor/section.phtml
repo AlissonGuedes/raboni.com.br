@@ -8,7 +8,7 @@
 		<div class="contato_dist">
 
 			<?php if ( ! empty($redes_sociais['whatsapp']) ) : ?>
-			<a class="whats" href="<?= 'https://wa.me/' . limpa_string($redes_sociais['whatsapp'], ''); ?>" target="_blank">
+			<a href="https://wa.me/<?= limpa_string($redes_sociais['whatsapp'], ''); ?>" target="_blank" class="whats">
 				<span class="icon_whats_b">
 					<img src="<?= base_path(true); ?>img/icons/icon_whats_b.png" class="img_cem">
 				</span>

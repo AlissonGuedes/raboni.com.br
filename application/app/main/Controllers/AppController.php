@@ -65,10 +65,6 @@ namespace App\Controllers {
 		 */
 		public function view($view, $params = [], array $options = []): string {
 
-			$header	 = $this -> header();
-			$footer  = $this -> footer();
-			$sidebar = $this -> sidebar();
-
 			$params['redes_sociais'] = [
 				'telefone' => configuracoes('telefone', 'tb_empresa'),
 				'whatsapp' => configuracoes('celular', 'tb_empresa'),
@@ -81,6 +77,9 @@ namespace App\Controllers {
 				'gmaps' => configuracoes('gmaps', 'tb_empresa')
 			];
 
+			$header	 = $this -> header();
+			$footer  = $this -> footer($params);
+			$sidebar = $this -> sidebar();
 			$view	 = view($view, $params, $options);
 
 			require(VIEW_TEMPLATES . 'html.phtml');
@@ -181,7 +180,7 @@ namespace App\Controllers {
 			$params['year'] = date('Y');
 
 			if ( file_exists(VIEW_TEMPLATES . 'footer.phtml') )
-				return $this -> template('templates/footer', $params);
+				return view('templates/footer', $params);
 
 			return '';
 
