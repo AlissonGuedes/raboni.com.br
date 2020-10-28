@@ -17,7 +17,7 @@
 
 <!--Whatsapp-->
 <?php if ( ! empty($redes_sociais['whatsapp']) ) : ?>
-<a href="<?= 'https://wa.me/' . limpa_string($redes_sociais['whatsapp']); ?>" target="_blank">
+<a href="<?= 'https://wa.me/' . limpa_string($redes_sociais['whatsapp'], ''); ?>" target="_blank">
 	<span class="wp">
 		<img src="{+ base_path true +}img/icons/icon_whats.png" class="img_cem">
 	</span>

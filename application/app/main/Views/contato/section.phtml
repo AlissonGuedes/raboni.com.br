@@ -5,11 +5,11 @@
 		<div class="title_2">NOSSOS CONTATOS</div>
 
 		<?php if ( ! empty($redes_sociais['whatsapp']) ) : ?>
-		<a class="whats" href="<?= 'https://wa.me/' . limpa_string($redes_sociais['whatsapp']); ?>" target="_blank">
+		<a class="whats" href="<?= 'https://wa.me/' . limpa_string($redes_sociais['whatsapp'], ''); ?>" target="_blank">
 			<span class="icon_whats_b">
 				<img src="<?= base_path(true); ?>img/icons/icon_whats_b.png" class="img_cem">
 			</span>
-			<span class="n_whats"><?= 'https://wa.me/' . limpa_string($redes_sociais['whatsapp']); ?></span>
+			<span class="n_whats"><?= $redes_sociais['whatsapp']; ?></span>
 		</a>
 		<?php endif; ?>
 
