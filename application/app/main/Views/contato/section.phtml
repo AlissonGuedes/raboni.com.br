@@ -28,19 +28,19 @@
 
 		<div class="social_media">
 			<?php if ( ! empty($redes_sociais['facebook']) ) : ?>
-			<a href="https://www.facebook.com/<?= $redes_sociais['facebook']; ?>" target="_blank">
+			<a href="<?= $redes_sociais['facebook']; ?>" target="_blank">
 				<div class="icon_face_b">
 					<img src="<?= base_path(true); ?>img/icons/icon_face_b.png" class="img_cem">
 				</div>
 			</a>
 			<?php endif; ?>
 			<?php if ( ! empty($redes_sociais['instagram']) ) : ?>
-			<a href="https://www.instagram.com/<?= $redes_sociais['instagram']; ?>" target="_blank">
+			<a href="<?= $redes_sociais['instagram']; ?>" target="_blank">
 				<div class="icon_insta_b">
 					<img src="<?= base_path(true); ?>img/icons/icon_insta_b.png" class="img_cem">
 				</div>
 			</a>
-			<span class="name_social">@rabonicosmeticos</span>
+			<span class="name_social"><?= $redes_sociais['instagram']; ?></span>
 			<?php endif; ?>
 		</div>
 
