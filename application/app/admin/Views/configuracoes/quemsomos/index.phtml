@@ -57,20 +57,22 @@
 
 				<div class="row">
 
-					<!-- BEGIN Input[E-mail] -->
+					<!-- BEGIN Input[Instagram] -->
 					<div class="col s12 l6 pl-0">
-						<div class="input-field amber-text">
-							<label class="grey-text">E-mail</label>
-							<input type="url" name="email" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> email : null; ?>">
+						<div class="input-field">
+							<label class="grey-text">Instagram</label>
+							<input type="url" name="instagram" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> instagram : null; ?>">
+							<div class="helper-text left amber-text">Informe apenas o usuário do Instagram</div>
 						</div>
 					</div>
-					<!-- END Input[E-mail] -->
+					<!-- END Input[Instagram] -->
 
 					<!-- BEGIN Input[Facebook] -->
 					<div class="col s12 l6 pr-0">
 						<div class="input-field amber-text mb-2">
 							<label class="grey-text">Facebook</label>
 							<input type="url" name="facebook" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> facebook : null; ?>">
+							<div class="helper-text left amber-text">Informe apenas o usuário do Facebook</div>
 						</div>
 					</div>
 					<!-- END Input[Facebook] -->
@@ -79,14 +81,14 @@
 
 				<div class="row">
 
-					<!-- BEGIN Input[Instagram] -->
+					<!-- BEGIN Input[E-mail] -->
 					<div class="col s12 l6 pl-0">
-						<div class="input-field">
-							<label class="grey-text">Instagram</label>
-							<input type="url" name="instagram" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> instagram : null; ?>">
+						<div class="input-field amber-text">
+							<label class="grey-text">E-mail</label>
+							<input type="url" name="email" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> email : null; ?>">
 						</div>
 					</div>
-					<!-- END Input[Instagram] -->
+					<!-- END Input[E-mail] -->
 
 					<!-- BEGIN Input[LinkedIn] -->
 					<div class="col s12 l6 pr-0">
