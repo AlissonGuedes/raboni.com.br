@@ -20,6 +20,7 @@ namespace App\Validations
 			return array(
 				'nome',
 				'descricao',
+				'modo_uso',
 				'id_categoria',
 				( ! empty($_FILES['imagem']) ? 'imagem' : NULL),
 				'status'

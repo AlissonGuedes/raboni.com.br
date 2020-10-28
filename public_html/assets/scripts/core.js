@@ -9,6 +9,11 @@ window.onload = () => {
 
     core();
 
+    setTimeout(function() {
+        // Remover a div carregando
+        $('#carregando').remove();
+    }, 550);
+
 }
 
 function core() {
@@ -148,4 +153,5 @@ function core() {
             $(el).toggle();
         });
     });
+
 }

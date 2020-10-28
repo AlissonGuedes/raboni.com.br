@@ -46,7 +46,11 @@ namespace App\Controllers {
 
 			if ( $this -> lead_model -> create_lead() ) {
 
-				$template = $this -> template('produtos/template_email.html', $_POST);
+				$dados['cod_produto'] = $_POST['produto'];
+				$dados['produto'] = $this -> produto_model -> getAll($_POST['produto']) -> get() -> getRow() -> nome;
+				$dados[] = $_POST;
+
+				$template = $this -> template('produtos/template_email.html', $dados);
 
 				if ( $this -> contato_model -> sendMail($template) )
 				{

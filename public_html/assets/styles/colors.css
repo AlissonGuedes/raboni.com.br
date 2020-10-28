@@ -31,7 +31,7 @@
     --pink-darken-3: #ad1457 !important;
     --pink-darken-4: #880e4f !important;
     --pink-darken-5: #470926 !important;
-    --gradient-45deg-darken-pink-pink : -webkit-gradient(radial, 165 0, 0, 220 -257, 465, from(#470926), to(#7d1144));
+    --gradient-45deg-darken-pink-pink: -webkit-gradient(radial, 165 0, 0, 220 -257, 465, from(#470926), to(#7d1144));
     /** Amber **/
     --amber: #ffc107 !important;
     --amber-lighten-1: #ffca28 !important;
@@ -309,6 +309,7 @@
 .gradient-45deg-darken-pink-pink {
     background: var(--gradient-45deg-darken-pink-pink);
 }
+
 
 /** Purple **/
 

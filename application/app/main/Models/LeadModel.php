@@ -249,7 +249,7 @@ namespace App\Models {
 						   -> getRow();
 
 			if ( ! $isset ) 
-				return $query -> execute($id_cliente, 5);
+				return $query -> execute($id_cliente, $id_produto);
 
 		}
 

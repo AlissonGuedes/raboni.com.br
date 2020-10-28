@@ -296,16 +296,21 @@ footer {
 
 /** pace **/
 
+.pace {
+    position: relative;
+    z-index: 9999999999999999999;
+}
+
 .pace .pace-progress {
-    background: var(--gradient-pink-pink) !important;
+    background: var(--gradient-45deg-darken-pink-pink) !important;
     height: 3px;
 }
 
 @media screen and (max-width: 899px) {
     .sidebar .sidebar-content .sidenav-trigger {
         position: absolute;
-        top: 102px !important;
-        left: 13px !important;
+        top: 92px !important;
+        left: 0px !important;
         display: block;
     }
     .tag_title {

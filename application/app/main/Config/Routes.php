@@ -47,6 +47,8 @@ $routes -> post('/distribuidor', 'Distribuidor::insert');
 $routes -> add('/contato', 'Contato::index');
 $routes -> post('/contato', 'Contato::insert');
 
+$routes -> add('api/token', 'Home::index');
+
 $rotas = \Functions\Library::getRoutes();
 	
 foreach ( $rotas as $route ) {

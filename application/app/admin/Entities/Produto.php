@@ -12,6 +12,7 @@ namespace App\Entities
 		protected $id_categoria;
 		protected $nome;
 		protected $descricao;
+		protected $modo_uso;
 		protected $imagem;
 		protected $status = '0';
 
@@ -66,6 +67,17 @@ namespace App\Entities
 		public function getDescricao()
 		{
 			return $this -> descricao;
+		}
+
+		public function setModoUso($str)
+		{
+			$this -> modo_uso = $str;
+			return $this;
+		}
+
+		public function getModoUso()
+		{
+			return $this -> modo_uso;
 		}
 
 		public function setDataAdd(string $str = null)
