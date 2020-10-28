@@ -19,7 +19,7 @@ namespace App\Controllers {
 
 		public function index() {
 
-			$dados['row'] = $this -> empresa_model -> get() -> getRow();
+			$dados['row'] = $this -> empresa_model -> getAll() -> get() -> getRow();
 			return $this -> view('configuracoes/quemsomos/index', $dados);
 
 		}

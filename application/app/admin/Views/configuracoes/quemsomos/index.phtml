@@ -30,30 +30,44 @@
 
 				<div class="row">
 
-					<!-- BEGIN Input[E-mail] -->
+					<!-- BEGIN Input[telefone] -->
 					<div class="col s12 l6 pl-0">
 						<div class="input-field amber-text mb-2">
+							<label class="grey-text">Telefone</label>
+							<input type="tel" name="telefone" class="amber-border white-text" maxlength="16" value="<?= isset($row) ? $row -> telefone : null; ?>">
+						</div>
+					</div>
+					<!-- END Input[telefone] -->
+
+					<!-- BEGIN Input[celular] -->
+					<div class="col s12 l6 pr-0">
+						<div class="input-field amber-text mb-2">
+							<label class="grey-text">Celular / Whatsapp</label>
+							<input type="tel" name="celular" class="amber-border white-text" maxlength="16" value="<?= isset($row) ? $row -> celular : null; ?>">
+						</div>
+					</div>
+					<!-- END Input[E-mail] -->
+
+				</div>
+
+
+				<div class="row">
+
+				</div>
+
+				<div class="row">
+
+					<!-- BEGIN Input[E-mail] -->
+					<div class="col s12 l6 pl-0">
+						<div class="input-field amber-text">
 							<label class="grey-text">E-mail</label>
 							<input type="url" name="email" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> email : null; ?>">
 						</div>
 					</div>
 					<!-- END Input[E-mail] -->
 
-					<!-- BEGIN Input[telefone] -->
-					<div class="col s12 l6 pr-0">
-						<div class="input-field amber-text mb-2">
-							<label class="grey-text">Telefone</label>
-							<input type="url" name="telefone" class="amber-border white-text" maxlength="16" value="<?= isset($row) ? $row -> telefone : null; ?>">
-						</div>
-					</div>
-					<!-- END Input[telefone] -->
-
-				</div>
-
-				<div class="row">
-
 					<!-- BEGIN Input[Facebook] -->
-					<div class="col s12 l6 pl-0">
+					<div class="col s12 l6 pr-0">
 						<div class="input-field amber-text mb-2">
 							<label class="grey-text">Facebook</label>
 							<input type="url" name="facebook" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> facebook : null; ?>">
@@ -61,8 +75,12 @@
 					</div>
 					<!-- END Input[Facebook] -->
 
+				</div>
+
+				<div class="row">
+
 					<!-- BEGIN Input[Instagram] -->
-					<div class="col s12 l6 pr-0">
+					<div class="col s12 l6 pl-0">
 						<div class="input-field">
 							<label class="grey-text">Instagram</label>
 							<input type="url" name="instagram" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> instagram : null; ?>">
@@ -70,12 +88,8 @@
 					</div>
 					<!-- END Input[Instagram] -->
 
-				</div>
-
-				<div class="row">
-
 					<!-- BEGIN Input[LinkedIn] -->
-					<div class="col s12 l6 pl-0">
+					<div class="col s12 l6 pr-0">
 						<div class="input-field">
 							<label class="grey-text">LinkedIn</label>
 							<input type="url" name="linkedin" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> linkedin : null; ?>">
@@ -83,20 +97,21 @@
 					</div>
 					<!-- END Input[LinkedIn] -->
 
+				</div>
+
+				<div class="row">
+
 					<!-- BEGIN Input[Google+] -->
-					<div class="col s12 l6 pr-0">
+					<div class="col s12 l6 pl-0">
 						<div class="input-field">
 							<label class="grey-text">Google+</label>
 							<input type="url" name="gplus" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> gplus : null; ?>">
 						</div>
 					</div>
 					<!-- END Input[Google+] -->
-				</div>
-
-				<div class="row">
 
 					<!-- BEGIN Input[GoogleMaps] -->
-					<div class="col s12 l6 pl-0">
+					<div class="col s12 l6 pr-0">
 						<div class="input-field">
 							<label class="grey-text">Google Maps</label>
 							<input type="url" name="gmaps" class="amber-border white-text" maxlength="160" value="<?= isset($row) ? $row -> gmaps : null; ?>">
@@ -104,10 +119,15 @@
 					</div>
 					<!-- END Input[GoogleMaps] -->
 
+				</div>
+
+				<div class="row">
+
 					<!-- BEGIN Input[GoogleMaps] -->
-					<div class="col s12 l6 pr-0">
-						<div class="input-field conj_img_edit">
-							<div class="media">
+					<div class="col s12 pl-0 pr-0 mb-1">
+						<div class="input-field pt-1">
+							<label class="grey-text active">Imagem da página de quem somos</label>
+							<div class="media conj_img_edit">
 								<div class="img_icon_pdf image_view z-depth-4 material-icons">
 									<?php if ( isset($row) && $row -> quem_somos_imagem ) : ?>
 									<img src="<?= $row -> quem_somos_imagem; ?>" class="img_cem materialboxed original">
@@ -127,6 +147,63 @@
 					</div>
 					<!-- END Input[GoogleMaps] -->
 
+				</div>
+
+				<div class="row">
+
+					<!-- BEGIN Input[GoogleMaps] -->
+					<div class="col s12 l6 pl-0">
+						<div class="input-field pt-1">
+							<label class="grey-text active pb-2">Imagem da página de distribuidores</label>
+							<div class="media conj_img_edit">
+								<div class="img_icon_pdf image_view z-depth-4 material-icons">
+									<?php if ( isset($row) && $row -> distribuidor_imagem ) : ?>
+									<img src="<?= $row -> distribuidor_imagem; ?>" class="img_cem materialboxed original">
+									<input type="hidden" name="original_name">
+									<?php endif; ?>
+								</div>
+								<div class="nome_arquivo" data-placeholder="<?= isset($row) && $row -> distribuidor_imagem ? basename($row -> distribuidor_imagem) : 'Selecione uma imagem'; ?>"></div>
+								<div class="bt_excluir waves-effect redefinir amber" style="<?= isset($row) && ! empty($row -> distribuidor_imagem) ? 'display: none;' : ''; ?>">
+									<i class="material-icons">undo</i>
+								</div>
+								<div class="btn_add_new_image waves-effect image_alt amber">
+									<i class="material-icons">add_photo_alternate</i>
+								</div>
+								<input type="file" name="distribuidor_imagem" id="distribuidor_imagem" accept="image">
+							</div>
+						</div>
+					</div>
+					<!-- END Input[GoogleMaps] -->
+
+					<!-- BEGIN Input[GoogleMaps] -->
+					<div class="col s12 l6 pr-0">
+						<div class="input-field pt-1">
+							<label class="grey-text active pb-1">Imagem da página de contato</label>
+							<div class="media conj_img_edit">
+								<div class="img_icon_pdf image_view z-depth-4 material-icons">
+									<?php if ( isset($row) && $row -> contato_imagem ) : ?>
+									<img src="<?= $row -> contato_imagem; ?>" class="img_cem materialboxed original">
+									<input type="hidden" name="original_name">
+									<?php endif; ?>
+								</div>
+								<div class="nome_arquivo" data-placeholder="<?= isset($row) && $row -> contato_imagem ? basename($row -> contato_imagem) : 'Selecione uma imagem'; ?>"></div>
+								<div class="bt_excluir waves-effect redefinir amber" style="<?= isset($row) && ! empty($row -> contato_imagem) ? 'display: none;' : ''; ?>">
+									<i class="material-icons">undo</i>
+								</div>
+								<div class="btn_add_new_image waves-effect image_alt amber">
+									<i class="material-icons">add_photo_alternate</i>
+								</div>
+								<input type="file" name="contato_imagem" id="contato_imagem" accept="image">
+							</div>
+						</div>
+					</div>
+					<!-- END Input[GoogleMaps] -->
+				</div>
+
+				<div class="row">
+				</div>
+
+				<div class="row">
 				</div>
 
 				<div class="row">

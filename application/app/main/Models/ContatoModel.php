@@ -153,8 +153,11 @@ namespace App\Models {
 			$this -> email = \Config\Services :: email();
 
 			$this -> email -> setMailType('html');
-			$this -> email -> setFrom('contato@raboni.com.br', 'Contato do Site Raboni');
-			$this -> email -> setTo($_POST['email']);
+			$this -> email -> setFrom($_POST['email'], $_POST['nome']);
+
+			// $this -> email -> setTo(configuracoes('email', 'tb_empresa'), 'Contato do Site' . configuracoes('title'));
+			$this -> email -> setTo('alissonguedes87@gmail.com');
+
 			$this -> email -> setSubject('Você recebeu uma nova mensagem no site ' . configuracoes('title'));
 
 			$this -> email -> setMessage($template);

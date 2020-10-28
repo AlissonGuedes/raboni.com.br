@@ -71,7 +71,7 @@ namespace App\Controllers {
 
 			$params['redes_sociais'] = [
 				'telefone' => configuracoes('telefone', 'tb_empresa'),
-				'whatsapp' => configuracoes('whatsapp', 'tb_empresa'),
+				'whatsapp' => configuracoes('celular', 'tb_empresa'),
 				'email' => configuracoes('email', 'tb_empresa'),
 				'facebook' => configuracoes('facebook', 'tb_empresa'),
 				'instagram' => configuracoes('instagram', 'tb_empresa'),
@@ -103,7 +103,7 @@ namespace App\Controllers {
 
 			$params['facebook']     = ! empty(configuracoes('facebook', 'tb_empresa')) ? configuracoes('facebook', 'tb_empresa') : '#';
 			$params['instagram']     = ! empty(configuracoes('instagram', 'tb_empresa')) ? configuracoes('instagram', 'tb_empresa') : '#';
-			$params['whatsapp']     = ! empty(configuracoes('whatsapp', 'tb_empresa')) ? configuracoes('whatsapp', 'tb_empresa') : '#';
+			$params['whatsapp']     = ! empty(configuracoes('celular', 'tb_empresa')) ? configuracoes('celular', 'tb_empresa') : '#';
 			$params['hide_menu']	= configuracoes('status', 'tb_acl_usuario');
 
 			foreach( $this -> translations as $ind => $val ) {

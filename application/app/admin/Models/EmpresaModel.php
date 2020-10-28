@@ -25,7 +25,7 @@ namespace App\Models {
 		 * 
 		 * @var string $returnType
 		 */
-		protected $returnType = '\App\Entities\Configuracao';
+		protected $returnType = '\App\Entities\Empresa';
 
 		/**
 		 * Validação para formulários
@@ -45,8 +45,8 @@ namespace App\Models {
 
 		public function getAll($find = null) {
 
-			$this -> select('id, quem_somos, quem_somos_imagem, telefone, whatsapp, facebook, instagram, gplus, linkedin, github, gmaps');
-			
+			$this -> select('id, quem_somos, quem_somos_imagem, distribuidor_imagem, contato_imagem, telefone, celular, email, facebook, instagram, gplus, linkedin, github, gmaps');
+
 			if ( !is_null($find) && is_numeric($find) ) {
 				$this -> where('id', $find);
 				return $this -> get() -> getRow();
@@ -75,6 +75,9 @@ namespace App\Models {
 			if ( isset($_GET['length']) ) {
 				$this -> offset($_GET['start']);
 			}
+
+// echo $this -> getCompiledSelect();
+// exit;
 
 			return $this;
 

@@ -14,9 +14,11 @@
 
 		<div class="col s12">
 
+			<?php if ( ! empty( configuracoes('distribuidor_imagem', 'tb_empresa') ) ) : ?>
 			<div class="img_empresa">
-				<img src="<?= base_path(true); ?>img/img_distribuidor.jpg" class="img_cem">
+				<img src="<?= configuracoes('distribuidor_imagem', 'tb_empresa'); ?>" class="img_cem">
 			</div>
+			<?php endif; ?>
 
 			<div class="info_empresa">
 

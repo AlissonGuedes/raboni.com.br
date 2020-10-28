@@ -14,6 +14,8 @@ namespace App\Entities {
 		protected $descripition = null;
 		protected $quem_somos = null;
 		protected $quem_somos_imagem = null;
+		protected $distribuidor_imagem = null;
+		protected $contato_imagem = null;
 		protected $keywords = null;
 		protected $generator = 'Aptana Studio 3';
 		protected $author = 'Alisson Guedes';
@@ -354,6 +356,139 @@ namespace App\Entities {
 				return base_path() . $this -> quem_somos_imagem;
 
 			return $this -> getBasePath() . 'img/quem_somos/' . $this -> quem_somos_imagem;
+
+		}
+
+
+		/**
+		 * Set distribuidor_imagem
+		 *
+		 * @param
+		 *        	String
+		 * @return String
+		 */
+		public function setDistribuidorImagem($str = null)
+		{
+
+			if ( ! isset($_SESSION[USERDATA]) )
+				return FALSE;
+
+			if ( empty($str) )
+				return false;
+
+			if ( ! is_null($str) && is_string($str) )
+			{
+				$this -> distribuidor_imagem = $str;
+				return $this;
+			}
+			else
+			{
+
+				foreach ( $str as $ind => $val )
+				{
+
+					$path = $_SERVER['DOCUMENT_ROOT'] . $this -> getBasePath() . 'img/quem_somos/';
+
+					$file = $this -> request -> getFile($ind);
+
+					if ( ! $file -> isValid() )
+						return false;
+
+					if ( ! is_dir($path) )
+						mkdir($path, 0777, TRUE);
+
+					$newName = $file -> getRandomName();
+					$file -> move($path, $newName);
+
+					$this -> distribuidor_imagem = $file -> getName();
+
+					return $this;
+
+				}
+
+			}
+
+		}
+
+		/**
+		 * Get DistribuidorImagem
+		 *
+		 * @return String
+		 */
+		public function getDistribuidorImagem(bool $realpath = false)
+		{
+
+			if ( $realpath )
+				return base_path() . $this -> distribuidor_imagem;
+
+			return $this -> getBasePath() . 'img/quem_somos/' . $this -> distribuidor_imagem;
+
+		}
+
+
+
+		/**
+		 * Set quem_somos_imagem
+		 *
+		 * @param
+		 *        	String
+		 * @return String
+		 */
+		public function setContatoImagem($str = null)
+		{
+
+			if ( ! isset($_SESSION[USERDATA]) )
+				return FALSE;
+
+			if ( empty($str) )
+				return false;
+
+			if ( ! is_null($str) && is_string($str) )
+			{
+				$this -> contato_imagem = $str;
+				return $this;
+			}
+			else
+			{
+
+				foreach ( $str as $ind => $val )
+				{
+
+					$path = $_SERVER['DOCUMENT_ROOT'] . $this -> getBasePath() . 'img/quem_somos/';
+
+					$file = $this -> request -> getFile($ind);
+
+					if ( ! $file -> isValid() )
+						return false;
+
+					if ( ! is_dir($path) )
+						mkdir($path, 0777, TRUE);
+
+					$newName = $file -> getRandomName();
+					$file -> move($path, $newName);
+
+					$this -> contato_imagem = $file -> getName();
+
+					return $this;
+
+				}
+
+			}
+
+		}
+
+		/**
+		 * Get Logomarca
+		 *
+		 * @return String
+		 */
+		public function getContatoImagem(bool $realpath = false)
+		{
+
+			if ( $realpath )
+				return base_path() . $this -> contato_imagem;
+
+			return $this -> getBasePath() . 'img/quem_somos/' . $this -> contato_imagem;
 
 		}
 

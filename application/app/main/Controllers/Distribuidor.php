@@ -3,12 +3,14 @@
 namespace App\Controllers {
 	
 	use \App\Models\DistribuidorModel;
+	use \App\Models\ContatoModel;
 
 	class Distribuidor extends AppController
 	{
 
 		public function __construct(){
 
+			$this -> contato_model = new ContatoModel();
 			$this -> distribuidor_model = new DistribuidorModel();
 		}
 
@@ -35,7 +37,7 @@ namespace App\Controllers {
 
 				$template = $this -> template('distribuidor/template_email.html', $_POST);
 
-				if ( $msg = $this -> distribuidor_model -> sendMail($template) )
+				if ( $msg = $this -> contato_model -> sendMail($template) )
 				{
 					$msg = 'Mensagem enviada com sucesso!';
 					$status = 'success';

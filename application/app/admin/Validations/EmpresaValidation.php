@@ -9,12 +9,14 @@ namespace App\Validations {
 			$this -> allowedFields =  [
 				'email',
 				'telefone',
+				'celular',
 				'facebook',
 				'instagram',
 				'linkedin',
 				'telefone',
-				( ! empty($_FILES['logomarca']) ? 'logomarca' : NULL ),
 				( ! empty($_FILES['quem_somos_imagem']) ? 'quem_somos_imagem' : NULL ),
+				( ! empty($_FILES['distribuidor_imagem']) ? 'distribuidor_imagem' : NULL ),
+				( ! empty($_FILES['contato_imagem']) ? 'contato_imagem' : NULL ),
 				'quem_somos',
 			];
 
